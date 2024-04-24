@@ -19,4 +19,4 @@ The source code will be made publicly available soon, please waiting...
 Table.1 Quantitative comparison with some SOTA models on referring camouflaged bbject detection benchmark datasets. 
 
 * **Salmaps**
-The salmaps of the above datasets can be download from [here]() [code:NEPU] or [Google]().
+The salmaps of the above datasets can be download from [here]() [code:NUST] or [Google](https://drive.google.com/file/d/1sp7voRymMtzmIc-zDTZtbptfaaGduB07/view?usp=drive_link).
