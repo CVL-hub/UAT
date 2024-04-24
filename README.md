@@ -7,7 +7,7 @@
 Python v3.6, Pytorch 0.4.0+, Cuda 10.0, TensorboardX 2.0, opencv-python
 
 # 2.Data Preparation
-Please visiting xxx for training and testing data. Thanks for xxx.
+Please visiting [RefCOD](https://github.com/zhangxuying1004/RefCOD) for training and testing data. Thanks for their contributions.
 
 # 3.Training & Testing
 The source code will be made publicly available soon, please waiting...
