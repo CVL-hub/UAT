@@ -1,4 +1,5 @@
-**Uncertainty-Aware Transformer for Referring Camouflaged Object Detection [TIP2025]**
+
+# Uncertainty-Aware Transformer for Referring Camouflaged Object Detection [TIP2025]
 
 ![image](figs/UAT.png)  
    Figure.1 The overall architecture of the proposed UAT for referring camouflaged 0bject detection.
@@ -7,10 +8,12 @@
 Python v3.6, Pytorch 0.4.0+, Cuda 10.0, TensorboardX 2.0, opencv-python
 
 # 2.Data Preparation
-Please visiting [RefCOD](https://github.com/zhangxuying1004/RefCOD) for training and testing data. Thanks for their contributions.
+### Please visiting [RefCOD](https://github.com/zhangxuying1004/RefCOD) for training and testing data. Thanks for their contributions.
 
 # 3.Training & Testing
-## step1. Download the training and testing dataset, and place them in the dataset floder.
+### step1. Download the training and testing dataset, and place them in the *dataset* floder.
+
+### step2. Download the pre-trained weights of pvtv2 [here](https://pan.baidu.com/s/1etvyFSv9nFrWKHxwHcSHJA?pwd=2025)[code:2025], and place them in the *pvt_weights* floder.
 
 # 4.Results
 * **Qualitative comparison**
