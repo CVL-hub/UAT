@@ -1,4 +1,4 @@
-# Uncertainty-Aware Transformer for Referring Camouflaged Object Detection
+# Uncertainty-Aware Transformer for Referring Camouflaged Object Detection [TIP2025]
 
 ![image](figs/UAT.png)  
    Figure.1 The overall architecture of the proposed UAT for referring camouflaged 0bject detection.
