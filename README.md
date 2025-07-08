@@ -1,7 +1,7 @@
 # Uncertainty-Aware Transformer for Referring Camouflaged Object Detection
 
-![image](figs/UATNet.png)  
-   Figure.1 The overall architecture of the proposed UATNet for referring camouflaged bbject detection. 
+![image](figs/UAT.png)  
+   Figure.1 The overall architecture of the proposed UAT for referring camouflaged 0bject detection.
 
 # 1.Requirements
 Python v3.6, Pytorch 0.4.0+, Cuda 10.0, TensorboardX 2.0, opencv-python
@@ -10,7 +10,7 @@ Python v3.6, Pytorch 0.4.0+, Cuda 10.0, TensorboardX 2.0, opencv-python
 Please visiting [RefCOD](https://github.com/zhangxuying1004/RefCOD) for training and testing data. Thanks for their contributions.
 
 # 3.Training & Testing
-The source code will be made publicly available soon, please waiting...
+## step1. Download the training and testing dataset, and place them in the dataset floder.
 
 # 4.Results
 * **Qualitative comparison**
