@@ -39,7 +39,7 @@ if __name__ == '__main__':
     parser.add_argument('--shot', type=int, default=5)
     parser.add_argument('--num_workers', type=int, default=8, help='the number of workers in dataloader')
     parser.add_argument('--gpu_id', type=str, default='4', help='train use gpu')
-    parser.add_argument('--data_root', type=str, default='/data/ranwanwu/Dataset/R2C7K', help='the path to put dataset')
+    parser.add_argument('--data_root', type=str, default='./dataset/R2C7K', help='the path to put dataset')
     parser.add_argument('--save_root', type=str, default='./snapshot', help='the path to save model params and log')   
     parser.add_argument('--pred_map_root', type=str, default='./pred_map/', help='the path to save pred maps')
 
