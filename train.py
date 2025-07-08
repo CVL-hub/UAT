@@ -91,7 +91,7 @@ if __name__ == '__main__':
     parser.add_argument('--clip', type=float, default=0.5, help='gradient clipping margin')
     parser.add_argument('--num_workers', type=int, default=8, help='the number of workers in dataloader')
     parser.add_argument('--gpu_id', type=str, default='6', help='train use gpu')
-    parser.add_argument('--data_root', type=str, default='/data/ranwanwu/Dataset/R2C7K', help='the path to put dataset')
+    parser.add_argument('--data_root', type=str, default='./dataset/R2C7K', help='the path to put dataset')
     parser.add_argument('--save_root', type=str, default='./snapshot/', help='the path to save model params and log')
     parser.add_argument('--pvt_weights', type=str, default='./pvt_weights/pvt_v2_b4.pth', help='the path to save model params and log')
     opt = parser.parse_args()
