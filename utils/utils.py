@@ -3,7 +3,6 @@ import os
 import torch
 import torch.nn.functional as F
 
-
 def set_gpu(gpu_id='0'):
     if gpu_id == '0':
         os.environ["CUDA_VISIBLE_DEVICES"] = "0"
@@ -44,7 +43,6 @@ def structure_loss(pred, mask):
     wiou = 1 - (inter + 1) / (union - inter + 1)
     return (wbce + wiou).mean()
 
-
 def clip_gradient(optimizer, grad_clip):
     """
     For calibrating misalignment gradient via cliping gradient technique
@@ -57,7 +55,6 @@ def clip_gradient(optimizer, grad_clip):
             if param.grad is not None:
                 param.grad.data.clamp_(-grad_clip, grad_clip)
               
-
 def load_model_params(model, params_path):
     assert os.path.exists(params_path)
     checkpoints = torch.load(params_path)
