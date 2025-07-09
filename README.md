@@ -1,10 +1,10 @@
 
-# **`[TIP2025]Uncertainty-Aware Transformer for Referring Camouflaged Object Detection`**
+# **`Uncertainty-Aware Transformer for Referring Camouflaged Object Detection`**
 
 Authors: Ranwan Wu, [Tian-Zhu Xiang](https://scholar.google.com/citations?user=5uQEWX0AAAAJ&hl=en&oi=ao), [Guo-Sen Xie](https://scholar.google.com/citations?user=LKaWa9gAAAAJ&hl=en&oi=ao), [Rongrong Gao](https://scholar.google.com/citations?user=MwdwZ_kAAAAJ&hl=en&oi=ao), [Xiangbo Shu](https://scholar.google.com/citations?user=FQfcm5oAAAAJ&hl=en&oi=ao), [Fang Zhao](https://scholar.google.com/citations?hl=en&user=4C7mvOwAAAAJ) and [Ling Shao](https://scholar.google.com/citations?user=z84rLjoAAAAJ&hl=en&oi=ao)
 
 
-Welcome to the official PyTorch implementation repository of our paper **Uncertainty-Aware Transformer for Referring Camouflaged Object Detection**, accepted to IEEE TIP 2025.
+Welcome to the official PyTorch implementation repository of our paper **Uncertainty-Aware Transformer for Referring Camouflaged Object Detection**, accepted to **IEEE TIP 2025**.
 
 # Framework
 ![image](figs/UAT.png)  
