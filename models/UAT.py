@@ -40,7 +40,6 @@ class Mlp(nn.Module):
 class cross_layer_attention(nn.Module):
     def __init__(self, dim, num_heads, qkv_bias=False):
         super().__init__()
-
         self.scale = dim ** -0.5
         self.num_heads = num_heads
 
@@ -53,7 +52,6 @@ class cross_layer_attention(nn.Module):
         self.norm_layer = nn.LayerNorm(dim)
 
     def forward(self, high_fea, mask):
-
         B, N, C = high_fea.shape
 
         high_q = self.high_q(high_fea).reshape(B, N, self.num_heads, C // self.num_heads).permute(0, 2, 1, 3)
@@ -76,7 +74,6 @@ class cross_layer_attention(nn.Module):
 
 
 class encoder_block(nn.Module):
-
     def __init__(self, dim, num_heads, mlp_ratio, qkv_bias=False, qk_scale=None, drop=0., attn_drop=0.,
                  drop_path=0., act_layer=nn.GELU, norm_layer=nn.LayerNorm):
         super().__init__()
@@ -109,7 +106,6 @@ class cross_attention_encoder(nn.Module):
 class uncertainty_generation(nn.Module):
     def __init__(self, dim, imgsize):
         super(uncertainty_generation, self).__init__()
-
         self.imgsize = imgsize
         self.soft_split = nn.Unfold(kernel_size=(4, 4), stride=(4, 4), padding=(0, 0))                     #image-->tokens
         self.soft_fuse = nn.Fold(output_size=(self.imgsize // 4, self.imgsize // 4), kernel_size=(4, 4),
@@ -140,7 +136,6 @@ class uncertainty_generation(nn.Module):
         return sample_z
 
     def forward(self, x):
-
         x = self.soft_fuse(x.transpose(-2, -1))
 
         mean = self.mean_conv(x)
@@ -154,14 +149,12 @@ class uncertainty_generation(nn.Module):
         uncertainty = (uncertainty - uncertainty.min()) / (uncertainty.max() - uncertainty.min())
         uncertainty = (1 - uncertainty) * x
         uncertainty = self.soft_split(uncertainty).transpose(-2, -1)
-
         return prob, uncertainty
 
 
 class probabilistic_attention(nn.Module):
     def __init__(self, dim, num_heads, imgsize, qkv_bias=False):
         super().__init__()
-
         self.scale = dim ** -0.5
         self.num_heads = num_heads
         self.tokens_to_uncertainty = uncertainty_generation(dim, imgsize)
@@ -174,7 +167,6 @@ class probabilistic_attention(nn.Module):
         self.norm_layer = nn.LayerNorm(dim)
 
     def forward(self, fea, uncertainty_map=None, uncertainty=True):
-
         if uncertainty:
             B, N, C = fea.shape
             prob, uncertainty_q = self.tokens_to_uncertainty(fea)
@@ -186,7 +178,6 @@ class probabilistic_attention(nn.Module):
             attn = torch.matmul(fea_q, fea_k.transpose(-2, -1)) * self.scale
             attn = attn.softmax(dim=-1)
             attn = (torch.matmul(attn, fea_v)).transpose(2, 1).reshape(B, N, C)
-
             return prob, uncertainty_q, attn
 
         else:
@@ -199,12 +190,10 @@ class probabilistic_attention(nn.Module):
             attn = torch.matmul(fea_q, fea_k.transpose(-2, -1)) * self.scale
             attn = attn.softmax(dim=-1)
             attn = (torch.matmul(attn, fea_v)).transpose(2, 1).reshape(B, N, C)
-
             return attn
 
 
 class decoderblock(nn.Module):
-
     def __init__(self, dim, num_heads, imgsize, mlp_ratio, qkv_bias=False, qk_scale=None, drop=0., attn_drop=0.,
                  drop_path=0., act_layer=nn.GELU, norm_layer=nn.LayerNorm):
         super().__init__()
@@ -217,7 +206,6 @@ class decoderblock(nn.Module):
         self.mlp = Mlp(in_features=dim, hidden_features=mlp_hidden_dim, act_layer=act_layer, drop=drop)
 
     def forward(self, fea, uncertainty_map=None, uncertainty=True):
-
         if uncertainty:
             prob, uncertainty_q, attn = self.attn(self.norm1(fea))
             fea = fea + self.drop_path(attn)
@@ -252,7 +240,6 @@ class Transformer_probabilistic_decoder(nn.Module):
 class Network(nn.Module):
     def __init__(self, opt):
         super(Network, self).__init__()
-
         self.imgsize = opt.imgsize
         self.backbone = pvt_v2_b2()
         path = './pvt_weights/pvt_v2_b2.pth'
