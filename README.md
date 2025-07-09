@@ -3,22 +3,26 @@
 
 Authors: Ranwan Wu, [Tian-Zhu Xiang](https://scholar.google.com/citations?user=5uQEWX0AAAAJ&hl=en&oi=ao), [Guo-Sen Xie](https://scholar.google.com/citations?user=LKaWa9gAAAAJ&hl=en&oi=ao), [Rongrong Gao](https://scholar.google.com/citations?user=MwdwZ_kAAAAJ&hl=en&oi=ao), [Xiangbo Shu](https://scholar.google.com/citations?user=FQfcm5oAAAAJ&hl=en&oi=ao), [Fang Zhao](https://scholar.google.com/citations?hl=en&user=4C7mvOwAAAAJ) and [Ling Shao](https://scholar.google.com/citations?user=z84rLjoAAAAJ&hl=en&oi=ao)
 
+Welcome to the official PyTorch implementation repository of our paper **Uncertainty-Aware Transformer for Referring Camouflaged Object Detection**, accepted to IEEE TIP 2025.
 
+# Framework
 ![image](figs/UAT.png)  
    Figure.1 The overall architecture of the proposed UAT for referring camouflaged 0bject detection.
 
 
 
-# 1.Requirements
+# Requirements
 Python v3.6, Pytorch 0.4.0+, Cuda 10.0, TensorboardX 2.0, opencv-python
 
-# 2.Data Preparation
+# Data Preparation
 ### Please visiting [RefCOD](https://github.com/zhangxuying1004/RefCOD) for training and testing data. Thanks for their contributions.
 
-# 3.Training & Testing
-### step1. Download the training and testing dataset, and place them in the *dataset* floder.
+# Training
+- Download the training and testing dataset, and place them in the *dataset* floder.
+- Download the pre-trained weights of pvtv2 [here](https://pan.baidu.com/s/1etvyFSv9nFrWKHxwHcSHJA?pwd=2025)[code:2025], and place them in the *pvt_weights* floder.
+- Run python train.py to train the model.
 
-### step2. Download the pre-trained weights of pvtv2 [here](https://pan.baidu.com/s/1etvyFSv9nFrWKHxwHcSHJA?pwd=2025)[code:2025], and place them in the *pvt_weights* floder.
+# Testing
 
 # 4.Results
 * **Qualitative comparison**
