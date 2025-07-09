@@ -8,7 +8,7 @@ Welcome to the official PyTorch implementation repository of our paper **Uncerta
 
 # Framework
 ![image](figs/UAT.png)  
-   Figure.1 The overall architecture of the proposed UAT for referring camouflaged 0bject detection.
+Figure.1 Architecture of uncertainty-aware transformer (UAT) for Ref-COD. UAT takes a camouflaged image and several referring images as input, respectively. Next, basic feature extraction on these images is performed. Then, the extracted features are fed into referring feature aggregation (RFA), cross-attention encoder (CAE), and transformer probabilistic decoder (TPD) to integrate visual reference into camouflage feature, aggregate multi-layer camouflage features, and model the dependencies between patches/tokens via Bayesian uncertainty learning, respectively. Finally, the predictions from all four stages are supervised by $L_{total}$ collaboratively.
 
 
 # Requirements
