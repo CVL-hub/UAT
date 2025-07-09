@@ -19,8 +19,8 @@ Python v3.6, Pytorch 0.4.0+, Cuda 10.0, TensorboardX 2.0, opencv-python
 - Please visiting [RefCOD](https://github.com/zhangxuying1004/RefCOD) for training and testing data. Thanks for their contributions.
 
 ### 2. Training
-- Download the training and testing dataset, and place them in the *dataset* floder.
-- Download the pre-trained weights of [pvtv2](https://pan.baidu.com/s/1etvyFSv9nFrWKHxwHcSHJA?pwd=2025)[code:2025] on Baidu Netdisk, and place them in the *pvt_weights* floder.
+- Download the training and testing dataset, and place them in the *./dataset* floder.
+- Download the pre-trained weights of [pvtv2](https://pan.baidu.com/s/1etvyFSv9nFrWKHxwHcSHJA?pwd=2025)[code:2025] on Baidu Netdisk, and place them in the *./pvt_weights* floder.
 - Run `python train.py` to train the model.
 - You can also download the our pre-trained [UAT.pth](https://pan.baidu.com/s/1BiDFrYWoAbGmAdC9MTcCUQ?pwd=2025) with access code 2025 on Baidu Netdisk directly.
 
