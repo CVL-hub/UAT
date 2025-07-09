@@ -1,8 +1,13 @@
 
 # Uncertainty-Aware Transformer for Referring Camouflaged Object Detection [TIP2025]
 
+Authors: Ranwan Wu, [Tian-Zhu Xiang](https://scholar.google.com/citations?user=5uQEWX0AAAAJ&hl=en&oi=ao), [Guo-Sen Xie](https://scholar.google.com/citations?user=LKaWa9gAAAAJ&hl=en&oi=ao), [Rongrong Gao](https://scholar.google.com/citations?user=MwdwZ_kAAAAJ&hl=en&oi=ao), [Xiangbo Shu](https://scholar.google.com/citations?user=FQfcm5oAAAAJ&hl=en&oi=ao), [Fang Zhao](https://scholar.google.com/citations?hl=en&user=4C7mvOwAAAAJ) and [Ling Shao](https://scholar.google.com/citations?user=z84rLjoAAAAJ&hl=en&oi=ao)
+
+
 ![image](figs/UAT.png)  
    Figure.1 The overall architecture of the proposed UAT for referring camouflaged 0bject detection.
+
+
 
 # 1.Requirements
 Python v3.6, Pytorch 0.4.0+, Cuda 10.0, TensorboardX 2.0, opencv-python
