@@ -9,7 +9,6 @@ import torchvision.transforms as transforms
 
 from data.utils import *
 
-
 class R2CObjData(Dataset):
 
     def __init__(self, data_root, mode='train', shot=5, image_size=352):
